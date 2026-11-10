@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Versão do sistema | FITGESTAO{% endblock %}
+{% block content %}
+<section class="page-header">
+  <div>
+    <h1>Versão do sistema</h1>
+    <p>Informações desta instalação do FITGESTAO.</p>
+  </div>
+</section>
+<div class="card">
+  <dl class="details-grid">
+    <div><dt>Sistema</dt><dd>{{ app_name }}</dd></div>
+    <div><dt>Versão instalada</dt><dd>{{ app_version }}</dd></div>
+    <div><dt>Canal</dt><dd>{{ release_channel }}</dd></div>
+    <div><dt>Identificador desta instalação</dt><dd><code>{{ installation.installation_id }}</code></dd></div>
+    <div><dt>Instalação criada em</dt><dd>{{ installation.created_at }}</dd></div>
+  </dl>
+  <p class="muted">A consulta de novas versões e o botão de atualização serão habilitados quando o serviço oficial de distribuição de versões estiver configurado.</p>
+</div>
+{% endblock %}
